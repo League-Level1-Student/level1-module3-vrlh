@@ -22,7 +22,7 @@ import javazoom.jl.player.advanced.AdvancedPlayer;
 /* 1. Download the JavaZoom jar from here: http://bit.ly/javazoom
  * 2. Right click your project and add it as an External JAR (Under Java Build Path > Libraries).*/
 
-public class Jukebox implements Runnable {
+public class Jukebox implements Runnable, ActionListner {
 
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(new Jukebox());
@@ -60,6 +60,8 @@ qButton.add(qLabel);
 
 dLabel = loadImage("duckPic");
 qLabel = loadImage("DuckPic2");
+
+
 }
 	/* Use this method to add album covers to your Panel. */
 	private JLabel loadImage(String fileName) {
